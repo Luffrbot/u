@@ -2213,7 +2213,7 @@ break
                     fs.writeFileSync('./database/group/leveling.json', JSON.stringify(_leveling))
                      reply(mess.leveloff)
 					} else {
-					reply(' Use ${prefix}leveling on para ativar e  ${prefix}leveling off para desativar')
+					reply('Use ${prefix}leveling on para ativar e  ${prefix}leveling off para desativar')
 					}
 					break
 			    case 'tinyurl':
