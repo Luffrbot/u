@@ -4,11 +4,7 @@ const help = (prefix) => {
            〘 𝙈𝙄𝘿𝙊𝙍𝙄𝙔𝘼 𝘽𝙊𝙏🧸 〙
 
 ║〘 INFORMAÇÕES 〙
-║
-║➥ 𝙈𝙄𝘿𝙊𝙍𝙄𝙔𝘼 𝘽𝙊𝙏 🧸
-║➥𝘿𝙊𝙉𝙊:Kratosツ *wa.me/+558694292223*
-║➥𝘿𝙤𝙖𝙘̧𝙤̃𝙚𝙨 0.00$🙂
-║
+║      Lücäs 🎩
 ║➣ 𝙈𝙀𝙉𝙐 𝙂𝙀𝙍𝘼𝙇📚
 ║
 ║
@@ -211,7 +207,7 @@ const help = (prefix) => {
 ║➣ 𝙈𝙖𝙞𝙨 𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙘̧𝙤̃𝙚𝙨
 ║
 ║ *SE quise coloca o bot no seu Grupo!! Chame o Dono do bot*
-║  
+║              
 ║
 ╚═〘 𝙈𝙄𝘿𝙊𝙍𝙄𝙔𝘼 𝘽𝙊𝙏🧸〙`
 }
