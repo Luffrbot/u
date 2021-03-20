@@ -59,7 +59,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
             + 'FN:Meliodas\n' // Nama kamu
             + 'ORG:Lexa;\n' // Nama bot
-            + 'TEL;type=CELL;type=VOICE;waid=5511910622412:+55 8981210976\n' //Nomor whatsapp kamu
+            + 'TEL;type=CELL;type=VOICE;waid=558981210976:+55 8981210976\n' //Nomor whatsapp kamu
             + 'END:VCARD'
 prefix = '.','*','#'
 blocked = []
@@ -219,20 +219,23 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-		
-				teks = `Muito que bem vindo/a ao nosso grupo @${num.split('@')[0]}\n
-				
-				 - - - - *${mdata.subject}*\n\n - - - -
-				
-				        𝙀𝙨𝙥𝙚𝙧𝙤 𝙦𝙪𝙚 𝙜𝙤𝙨𝙩𝙚 ❤️`
-					
+				try {
+					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+				teks = `𝙊𝙡𝙖́ 𝙢𝙚𝙪 𝙘𝙖𝙧𝙤 𝙜𝙖𝙛𝙖𝙣𝙝𝙤𝙩𝙤, 𝙨𝙚𝙟𝙖 𝙗𝙚𝙢 @${num.split('@')[0]}\n𝙎𝙚𝙟𝙖 𝙗𝙚𝙢 𝙫𝙞𝙣𝙙𝙤 𝙖𝙤 𝙜𝙧𝙪𝙥𝙤  *${mdata.subject}*\n\n𝙀𝙨𝙥𝙚𝙧𝙤 𝙦𝙪𝙚 𝙜𝙤𝙨𝙩𝙚 ❤️`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-			
-				teks = `Espero que possa voltar um dia! @${num.split('@')[0]} 👋`
+				try {
+					ppimg = await client.getProfilePicture(`${num.split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+				teks = `𝙁𝙡𝙬, 𝙫𝙖𝙞 𝙥𝙚𝙡𝙖 𝙨𝙤𝙢𝙗𝙧𝙖 𝙥𝙦 𝙗𝙤𝙨𝙩𝙖 𝙣𝙤 𝙨𝙤𝙡 𝙨𝙚𝙘𝙖@${num.split('@')[0]} 😂👋`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -297,11 +300,11 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["5511910622412@s.whatsapp.net"] // replace this with your number
-			const mod = [ownerNumber,"5511910622412@s.whatsapp.net"]//ubah nomor lo
-			const adminbotnumber = ["5511910622412@s.whatsapp.net"]//ubah nomor lo
-			const frendsowner = ["5511910622412@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["5511910622412F@s.whatsapp.net","]
+			const ownerNumber = ["5589210976@s.whatsapp.net"] // replace this with your number
+			const mod = [ownerNumber,"5589210976@s.whatsapp.net"]//ubah nomor lo
+			const adminbotnumber = ["5589210976@s.whatsapp.net"]//ubah nomor lo
+			const frendsowner = ["5589210976@s.whatsapp.net"]//ubah nomor lo
+			const premium = ["5589210976@s.whatsapp.net","]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -1057,13 +1060,13 @@ if (text.includes("placa"))
 					buffer = await getBuffer(`https://api.vhtear.com/hartatahta?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Harta Tahta '+teks})
 					break
-				case 'aries':
+				case 'testing':
 					var gh = body.slice(5)
 					var gbl3 = gh.split("|")[0];
 					var gbl4 = gh.split("|")[1];
-					if (args.length < 1) return reply('Nao vejo o texta an')
+					if (args.length < 1) return reply('Cadê o texto, hum')
 					reply(mess.wait)
-					anu = await fetchJson(`https://aztro.sameerkumar.website/?sign=aries&day=today`, {method: 'POST'})
+					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/watercolour?text1=${gbl3}&text2=${gbl4}&apikey=xptnbot352`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
@@ -1361,11 +1364,6 @@ if (text.includes("placa"))
 						fs.unlinkSync(rano)
 					})
 					break
-					F
-					
-					
-					
-					
 				case 'firetext':
 					if (args.length < 1) return reply(mess.blank)
 					tels = body.slice(7)
