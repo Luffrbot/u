@@ -1057,13 +1057,13 @@ if (text.includes("placa"))
 					buffer = await getBuffer(`https://api.vhtear.com/hartatahta?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Harta Tahta '+teks})
 					break
-				case 'testing':
+				case 'aries':
 					var gh = body.slice(5)
 					var gbl3 = gh.split("|")[0];
 					var gbl4 = gh.split("|")[1];
-					if (args.length < 1) return reply('Cadê o texto, hum')
+					if (args.length < 1) return reply('Nao vejo o texta an')
 					reply(mess.wait)
-					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/watercolour?text1=${gbl3}&text2=${gbl4}&apikey=xptnbot352`, {method: 'get'})
+					anu = await fetchJson(`https://aztro.sameerkumar.website/?sign=aries&day=today`, {method: 'POST'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
