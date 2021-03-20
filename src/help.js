@@ -4,7 +4,9 @@ const help = (prefix) => {
            〘 𝙈𝙄𝘿𝙊𝙍𝙄𝙔𝘼 𝘽𝙊𝙏🧸 〙
 
 ║〘 INFORMAÇÕES 〙
-║      Lücäs 🎩
+║     
+     Lücäs 🎩
+
 ║➣ 𝙈𝙀𝙉𝙐 𝙂𝙀𝙍𝘼𝙇📚
 ║
 ║
